@@ -56,3 +56,7 @@ This project allows users to access their webcam and microphone, visualize audio
 - Ensure you grant permission to access your webcam and microphone.
 - Noise suppression may not be effective in all browsers. Ensure you're using a browser like Google Chrome or Microsoft Edge for full functionality.
 - The visualizer will only work when audio input is available.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
