@@ -8,15 +8,16 @@
         body {
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Prevents scrolling */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            background-color: black; /* Optional: a background color for contrast */
         }
         video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 90%;
-            height: 90%;
-            object-fit: cover; /* Ensures the video covers the screen without distortion */
+            width: 90%; /* Adjust the width as needed */
+            height: 90%; /* Adjust the height as needed */
+            /* object-fit: cover; Ensures the video fills its container without distortion */
         }
     </style>
 </head>
