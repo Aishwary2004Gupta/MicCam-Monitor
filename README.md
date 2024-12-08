@@ -50,3 +50,9 @@ This project allows users to access their webcam and microphone, visualize audio
 - **AnalyserNode**: Analyzes the audio input and provides frequency data.
 - **draw()**: Continuously draws the audio data as a visualizer on the canvas.
 - **applyConstraints()**: Applies noise suppression settings to the microphone input.
+
+## Troubleshooting
+
+- Ensure you grant permission to access your webcam and microphone.
+- Noise suppression may not be effective in all browsers. Ensure you're using a browser like Google Chrome or Microsoft Edge for full functionality.
+- The visualizer will only work when audio input is available.
