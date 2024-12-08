@@ -42,3 +42,11 @@ This project allows users to access their webcam and microphone, visualize audio
 
 - **`index.html`**: Contains the HTML structure, including the video element for webcam display, a canvas for the audio visualizer, and a checkbox for toggling noise suppression.
 - **`index.js`**: Contains the JavaScript logic for accessing webcam and microphone, processing audio, drawing the audio visualizer, and applying noise suppression based on user input.
+
+### Key JavaScript Functions
+
+- **getUserMedia()**: Accesses the user's webcam and microphone.
+- **AudioContext**: Creates an audio context for real-time audio processing.
+- **AnalyserNode**: Analyzes the audio input and provides frequency data.
+- **draw()**: Continuously draws the audio data as a visualizer on the canvas.
+- **applyConstraints()**: Applies noise suppression settings to the microphone input.
