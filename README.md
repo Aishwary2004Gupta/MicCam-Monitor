@@ -16,3 +16,14 @@ This project allows users to access their webcam and microphone, visualize audio
 - **Web Audio API**: For audio processing and visual representation.
 - **MediaDevices API**: For accessing the user's media devices (webcam and microphone).
 
+## Installation
+
+1. Clone this repository to your local machine.
+
+    ```bash
+    git clone https://github.com/your-username/webcam-audio-visualizer.git
+    ```
+
+2. Open `index.html` in a browser that supports WebRTC, such as **Google Chrome** or **Microsoft Edge**.
+
+3. Make sure your browser has permissions to access the webcam and microphone.
