@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Access Webcam</title>
+    <title>Access Webcam and Audio</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh; 
@@ -16,13 +17,22 @@
         }
         video {
             width: 95%; 
-            height: 95%;
-            object-fit: auto; 
+            height: 70%; 
+            object-fit: auto;
+            border: 2px solid white;
+        }
+        canvas {
+            width: 95%;
+            height: 15%; 
+            margin-top: 20px;
+            background-color: #333;
+            border: 2px solid white;
         }
     </style>
 </head>
 <body>
     <video autoplay></video>
+    <canvas id="audioVisualizer"></canvas>
     <script src="./index.js"></script>
 </body>
 </html>
