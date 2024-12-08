@@ -28,11 +28,19 @@
             background-color: #333;
             border: 2px solid white;
         }
+        label {
+            color: white;
+            margin-top: 10px;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
     <video autoplay></video>
     <canvas id="audioVisualizer"></canvas>
+    <label>
+        <input type="checkbox" id="noiseSuppressionCheckbox"> Enable Noise Suppression
+    </label>
     <script src="./index.js"></script>
 </body>
 </html>

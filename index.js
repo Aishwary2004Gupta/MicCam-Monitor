@@ -1,12 +1,16 @@
 const video = document.querySelector('video');
 const canvas = document.getElementById('audioVisualizer');
 const ctx = canvas.getContext('2d');
+const noiseSuppressionCheckbox = document.getElementById('noiseSuppressionCheckbox');
+let currentStream;
 
 navigator.mediaDevices.getUserMedia({ video: true, audio: true })
     .then(stream => {
         // Display the video stream
         video.srcObject = stream;
         video.play();
+
+        currentStream = stream;
 
         // Set up the audio context and analyzer
         const audioContext = new (window.AudioContext || window.webkitAudioContext)();
@@ -47,3 +51,21 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
     .catch(error => {
         console.error('Error accessing webcam or microphone:', error);
     });
+
+// Add event listener for noise suppression checkbox
+noiseSuppressionCheckbox.addEventListener('change', (event) => {
+    const enableNoiseSuppression = event.target.checked;
+
+    if (currentStream) {
+        const audioTracks = currentStream.getAudioTracks();
+        audioTracks.forEach(track => {
+            track.applyConstraints({
+                advanced: [{
+                    noiseSuppression: enableNoiseSuppression
+                }]
+            }).catch(err => {
+                console.error('Error applying noise suppression:', err);
+            });
+        });
+    }
+});
