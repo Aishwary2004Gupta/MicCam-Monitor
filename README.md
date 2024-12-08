@@ -37,3 +37,8 @@ This project allows users to access their webcam and microphone, visualize audio
 3. Below the video stream, an audio visualizer will display the real-time audio levels from your microphone.
 
 4. **Optional**: Use the checkbox to enable or disable noise suppression. When enabled, it reduces unwanted background noise for clearer audio.
+
+## Code Overview
+
+- **`index.html`**: Contains the HTML structure, including the video element for webcam display, a canvas for the audio visualizer, and a checkbox for toggling noise suppression.
+- **`index.js`**: Contains the JavaScript logic for accessing webcam and microphone, processing audio, drawing the audio visualizer, and applying noise suppression based on user input.
