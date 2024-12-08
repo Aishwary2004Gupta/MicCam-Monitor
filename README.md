@@ -27,3 +27,13 @@ This project allows users to access their webcam and microphone, visualize audio
 2. Open `index.html` in a browser that supports WebRTC, such as **Google Chrome** or **Microsoft Edge**.
 
 3. Make sure your browser has permissions to access the webcam and microphone.
+
+## How to Use
+
+1. Open the `index.html` file in a browser that supports webcam and microphone access.
+
+2. You will see your webcam stream displayed on the page.
+
+3. Below the video stream, an audio visualizer will display the real-time audio levels from your microphone.
+
+4. **Optional**: Use the checkbox to enable or disable noise suppression. When enabled, it reduces unwanted background noise for clearer audio.
