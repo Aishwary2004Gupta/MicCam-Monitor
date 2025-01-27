@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Access Webcam and Audio</title>
@@ -12,22 +13,25 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh; 
-            background-color: black; 
+            height: 100vh;
+            background-color: black;
         }
+
         video {
-            width: 95%; 
-            height: 70%; 
+            width: 95%;
+            height: 70%;
             object-fit: auto;
             border: 2px solid white;
         }
+
         canvas {
             width: 95%;
-            height: 15%; 
+            height: 15%;
             margin-top: 20px;
             background-color: #333;
             border: 2px solid white;
         }
+
         label {
             color: white;
             margin-top: 10px;
@@ -35,6 +39,7 @@
         }
     </style>
 </head>
+
 <body>
     <video autoplay></video>
     <canvas id="audioVisualizer"></canvas>
@@ -43,4 +48,5 @@
     </label>
     <script src="./index.js"></script>
 </body>
+
 </html>
