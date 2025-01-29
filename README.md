@@ -28,7 +28,7 @@ This project allows users to access their webcam and microphone, visualize audio
 
 3. Make sure your browser has permissions to access the webcam and microphone.
 
-## How to Use
+## How to Use 
 
 1. Open the `index.html` file in a browser that supports webcam and microphone access.
 
