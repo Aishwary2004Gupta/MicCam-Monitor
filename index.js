@@ -31,6 +31,10 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
         // Connect the audio source to the analyser
         source.connect(analyser);
 
+        // Set canvas dimensions
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
         // Draw the audio levels
         function draw() {
             requestAnimationFrame(draw);
