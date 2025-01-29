@@ -13,7 +13,13 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
         currentStream = stream;
 
         // Set up the audio context and analyzer
-        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        let audioContext;
+        try {
+            audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        } catch (e) {
+            console.error('Web Audio API is not supported in this browser', e);
+            return;
+        }
         const source = audioContext.createMediaStreamSource(stream);
         const analyser = audioContext.createAnalyser();
 
@@ -53,19 +59,23 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
     });
 
 // Add event listener for noise suppression checkbox
-noiseSuppressionCheckbox.addEventListener('change', (event) => {
-    const enableNoiseSuppression = event.target.checked;
+if (noiseSuppressionCheckbox) {
+    noiseSuppressionCheckbox.addEventListener('change', (event) => {
+        const enableNoiseSuppression = event.target.checked;
 
-    if (currentStream) {
-        const audioTracks = currentStream.getAudioTracks();
-        audioTracks.forEach(track => {
-            track.applyConstraints({
-                advanced: [{
-                    noiseSuppression: enableNoiseSuppression
-                }]
-            }).catch(err => {
-                console.error('Error applying noise suppression:', err);
+        if (currentStream) {
+            const audioTracks = currentStream.getAudioTracks();
+            audioTracks.forEach(track => {
+                track.applyConstraints({
+                    advanced: [{
+                        noiseSuppression: enableNoiseSuppression
+                    }]
+                }).catch(err => {
+                    console.error('Error applying noise suppression:', err);
+                });
             });
-        });
-    }
-});
+        }
+    });
+} else {
+    console.warn('Noise suppression checkbox not found');
+}
