@@ -20,9 +20,9 @@ This project allows users to access their webcam and microphone, visualize audio
 
 1. Clone this repository to your local machine.
 
-    ```bash
-    git clone https://github.com/your-username/webcam-audio-visualizer.git
-    ```
+   ```bash
+   git clone https://github.com/your-username/webcam-audio-visualizer.git
+   ```
 
 2. Open `index.html` in a browser that supports WebRTC, such as **Google Chrome** or **Microsoft Edge**.
 
