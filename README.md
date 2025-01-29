@@ -19,7 +19,7 @@ This project allows users to access their webcam and microphone, visualize audio
 ## Installation
 
 1. Clone this repository to your local machine.
- 
+
    ```bash
    git clone https://github.com/your-username/webcam-audio-visualizer.git
    ```
